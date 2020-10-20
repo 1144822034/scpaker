@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B5CFE67-D78B-4CCD-A6BB-616BF772C094}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{9ef11e43-1701-4396-8835-8392d57abb70}</TemplateGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Engine</RootNamespace>
+    <AssemblyName>Engine</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>True</Deterministic>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenTK_1_0">
+      <HintPath>..\assimbles\OpenTK_1_0.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System_IO_Compression">
+      <HintPath>..\assimbles\System_IO_Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System_IO_Compression_FileSystem">
+      <HintPath>..\assimbles\System_IO_Compression_FileSystem.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine.Audio\AudioTrackCache.cs" />
+    <Compile Include="Engine.Audio\BaseSound.cs" />
+    <Compile Include="Engine.Audio\Mixer.cs" />
+    <Compile Include="Engine.Audio\Sound.cs" />
+    <Compile Include="Engine.Audio\SoundBuffer.cs" />
+    <Compile Include="Engine.Audio\SoundState.cs" />
+    <Compile Include="Engine.Audio\StreamingSound.cs" />
+    <Compile Include="Engine.Content\BitmapFontContentReader.cs" />
+    <Compile Include="Engine.Content\BitmapFontContentWriter.cs" />
+    <Compile Include="Engine.Content\ColorContentReader.cs" />
+    <Compile Include="Engine.Content\ColorContentWriter.cs" />
+    <Compile Include="Engine.Content\ContentCache.cs" />
+    <Compile Include="Engine.Content\ContentInfo.cs" />
+    <Compile Include="Engine.Content\ContentReaderAttribute.cs" />
+    <Compile Include="Engine.Content\ContentStream.cs" />
+    <Compile Include="Engine.Content\ContentWriterAttribute.cs" />
+    <Compile Include="Engine.Content\IContentReader.cs" />
+    <Compile Include="Engine.Content\IContentWriter.cs" />
+    <Compile Include="Engine.Content\ImageContentReader.cs" />
+    <Compile Include="Engine.Content\ImageContentWriter.cs" />
+    <Compile Include="Engine.Content\ModelContentReader.cs" />
+    <Compile Include="Engine.Content\ModelContentWriter.cs" />
+    <Compile Include="Engine.Content\ModelDataContentReader.cs" />
+    <Compile Include="Engine.Content\ModelDataContentWriter.cs" />
+    <Compile Include="Engine.Content\OptionalAttribute.cs" />
+    <Compile Include="Engine.Content\PadStream.cs" />
+    <Compile Include="Engine.Content\ShaderContentReader.cs" />
+    <Compile Include="Engine.Content\ShaderContentWriter.cs" />
+    <Compile Include="Engine.Content\SoundBufferContentReader.cs" />
+    <Compile Include="Engine.Content\SoundBufferContentWriter.cs" />
+    <Compile Include="Engine.Content\StreamingSourceContentReader.cs" />
+    <Compile Include="Engine.Content\StreamingSourceContentWriter.cs" />
+    <Compile Include="Engine.Content\StringContentReader.cs" />
+    <Compile Include="Engine.Content\StringContentWriter.cs" />
+    <Compile Include="Engine.Content\TextureContentReader.cs" />
+    <Compile Include="Engine.Content\TextureContentWriter.cs" />
+    <Compile Include="Engine.Content\XElementContentReader.cs" />
+    <Compile Include="Engine.Content\XElementContentWriter.cs" />
+    <Compile Include="Engine.Graphics\BaseBatch.cs" />
+    <Compile Include="Engine.Graphics\BaseFlatBatch.cs" />
+    <Compile Include="Engine.Graphics\BaseFontBatch.cs" />
+    <Compile Include="Engine.Graphics\BasePrimitivesRenderer.cs" />
+    <Compile Include="Engine.Graphics\BaseTexturedBatch.cs" />
+    <Compile Include="Engine.Graphics\Blend.cs" />
+    <Compile Include="Engine.Graphics\BlendFunction.cs" />
+    <Compile Include="Engine.Graphics\BlendState.cs" />
+    <Compile Include="Engine.Graphics\ColorFormat.cs" />
+    <Compile Include="Engine.Graphics\CompareFunction.cs" />
+    <Compile Include="Engine.Graphics\CullMode.cs" />
+    <Compile Include="Engine.Graphics\DepthFormat.cs" />
+    <Compile Include="Engine.Graphics\DepthStencilState.cs" />
+    <Compile Include="Engine.Graphics\Display.cs" />
+    <Compile Include="Engine.Graphics\ExtensionMethods.cs" />
+    <Compile Include="Engine.Graphics\FlatBatch2D.cs" />
+    <Compile Include="Engine.Graphics\FlatBatch3D.cs" />
+    <Compile Include="Engine.Graphics\FontBatch2D.cs" />
+    <Compile Include="Engine.Graphics\FontBatch3D.cs" />
+    <Compile Include="Engine.Graphics\GLWrapper.cs" />
+    <Compile Include="Engine.Graphics\GraphicsResource.cs" />
+    <Compile Include="Engine.Graphics\IndexBuffer.cs" />
+    <Compile Include="Engine.Graphics\IndexFormat.cs" />
+    <Compile Include="Engine.Graphics\LitShader.cs" />
+    <Compile Include="Engine.Graphics\LockOnFirstUse.cs" />
+    <Compile Include="Engine.Graphics\Model.cs" />
+    <Compile Include="Engine.Graphics\ModelBone.cs" />
+    <Compile Include="Engine.Graphics\ModelMesh.cs" />
+    <Compile Include="Engine.Graphics\ModelMeshPart.cs" />
+    <Compile Include="Engine.Graphics\PrimitivesRenderer2D.cs" />
+    <Compile Include="Engine.Graphics\PrimitivesRenderer3D.cs" />
+    <Compile Include="Engine.Graphics\PrimitiveType.cs" />
+    <Compile Include="Engine.Graphics\RasterizerState.cs" />
+    <Compile Include="Engine.Graphics\RenderTarget2D.cs" />
+    <Compile Include="Engine.Graphics\SamplerState.cs" />
+    <Compile Include="Engine.Graphics\Shader.cs" />
+    <Compile Include="Engine.Graphics\ShaderMacro.cs" />
+    <Compile Include="Engine.Graphics\ShaderParameter.cs" />
+    <Compile Include="Engine.Graphics\ShaderParameterType.cs" />
+    <Compile Include="Engine.Graphics\ShaderTransforms.cs" />
+    <Compile Include="Engine.Graphics\TextAnchor.cs" />
+    <Compile Include="Engine.Graphics\Texture2D.cs" />
+    <Compile Include="Engine.Graphics\TextureAddressMode.cs" />
+    <Compile Include="Engine.Graphics\TexturedBatch2D.cs" />
+    <Compile Include="Engine.Graphics\TexturedBatch3D.cs" />
+    <Compile Include="Engine.Graphics\TextureFilterMode.cs" />
+    <Compile Include="Engine.Graphics\UnlitShader.cs" />
+    <Compile Include="Engine.Graphics\VertexBuffer.cs" />
+    <Compile Include="Engine.Graphics\VertexDeclaration.cs" />
+    <Compile Include="Engine.Graphics\VertexElement.cs" />
+    <Compile Include="Engine.Graphics\VertexElementFormat.cs" />
+    <Compile Include="Engine.Graphics\VertexElementSemantic.cs" />
+    <Compile Include="Engine.Graphics\VertexPositionColor.cs" />
+    <Compile Include="Engine.Graphics\VertexPositionColorTexture.cs" />
+    <Compile Include="Engine.Graphics\Viewport.cs" />
+    <Compile Include="Engine.Input\GamePad.cs" />
+    <Compile Include="Engine.Input\GamePadButton.cs" />
+    <Compile Include="Engine.Input\GamePadStick.cs" />
+    <Compile Include="Engine.Input\GamePadTrigger.cs" />
+    <Compile Include="Engine.Input\Key.cs" />
+    <Compile Include="Engine.Input\Keyboard.cs" />
+    <Compile Include="Engine.Input\Mouse.cs" />
+    <Compile Include="Engine.Input\MouseButton.cs" />
+    <Compile Include="Engine.Input\MouseButtonEvent.cs" />
+    <Compile Include="Engine.Input\MouseEvent.cs" />
+    <Compile Include="Engine.Input\Touch.cs" />
+    <Compile Include="Engine.Input\TouchLocation.cs" />
+    <Compile Include="Engine.Input\TouchLocationState.cs" />
+    <Compile Include="Engine.Media\BitmapFont.cs" />
+    <Compile Include="Engine.Media\Bmp.cs" />
+    <Compile Include="Engine.Media\Collada.cs" />
+    <Compile Include="Engine.Media\Image.cs" />
+    <Compile Include="Engine.Media\ImageFileFormat.cs" />
+    <Compile Include="Engine.Media\Jpg.cs" />
+    <Compile Include="Engine.Media\ModelBoneData.cs" />
+    <Compile Include="Engine.Media\ModelBuffersData.cs" />
+    <Compile Include="Engine.Media\ModelData.cs" />
+    <Compile Include="Engine.Media\ModelFileFormat.cs" />
+    <Compile Include="Engine.Media\ModelMeshData.cs" />
+    <Compile Include="Engine.Media\ModelMeshPartData.cs" />
+    <Compile Include="Engine.Media\Ogg.cs" />
+    <Compile Include="Engine.Media\PeekStream.cs" />
+    <Compile Include="Engine.Media\Png.cs" />
+    <Compile Include="Engine.Media\SoundData.cs" />
+    <Compile Include="Engine.Media\SoundFileFormat.cs" />
+    <Compile Include="Engine.Media\StreamingSource.cs" />
+    <Compile Include="Engine.Media\Wav.cs" />
+    <Compile Include="Engine.Serialization\Archive.cs" />
+    <Compile Include="Engine.Serialization\ArraySerializer.cs" />
+    <Compile Include="Engine.Serialization\BinaryInputArchive.cs" />
+    <Compile Include="Engine.Serialization\BinaryOutputArchive.cs" />
+    <Compile Include="Engine.Serialization\BooleanHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\BooleanSerializer.cs" />
+    <Compile Include="Engine.Serialization\BoundingBoxHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\BoundingCircleHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\BoundingRectangleHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\BoundingSphereHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\BoxHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\BoxSerializer.cs" />
+    <Compile Include="Engine.Serialization\ByteHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\ByteSerializer.cs" />
+    <Compile Include="Engine.Serialization\CharHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\CharSerializer.cs" />
+    <Compile Include="Engine.Serialization\ColorHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\ColorSerializer.cs" />
+    <Compile Include="Engine.Serialization\DateTimeHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\DecimalHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\DictionarySerializer.cs" />
+    <Compile Include="Engine.Serialization\DoubleHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\DoubleSerializer.cs" />
+    <Compile Include="Engine.Serialization\DynamicArraySerializer.cs" />
+    <Compile Include="Engine.Serialization\EngineBinaryReader.cs" />
+    <Compile Include="Engine.Serialization\EngineBinaryWriter.cs" />
+    <Compile Include="Engine.Serialization\EnumHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\GuidHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\GuidSerializer.cs" />
+    <Compile Include="Engine.Serialization\HashSetSerializer.cs" />
+    <Compile Include="Engine.Serialization\HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\HumanReadableConverterAttribute.cs" />
+    <Compile Include="Engine.Serialization\IHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\InputArchive.cs" />
+    <Compile Include="Engine.Serialization\Int16HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Int16Serializer.cs" />
+    <Compile Include="Engine.Serialization\Int32HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Int32Serializer.cs" />
+    <Compile Include="Engine.Serialization\Int64HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Int64Serializer.cs" />
+    <Compile Include="Engine.Serialization\ISerializable.cs" />
+    <Compile Include="Engine.Serialization\ISerializer.cs" />
+    <Compile Include="Engine.Serialization\KeyValuePairSerializer.cs" />
+    <Compile Include="Engine.Serialization\ListSerializer.cs" />
+    <Compile Include="Engine.Serialization\MatrixHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\MatrixSerializer.cs" />
+    <Compile Include="Engine.Serialization\NullableSerializer.cs" />
+    <Compile Include="Engine.Serialization\OutputArchive.cs" />
+    <Compile Include="Engine.Serialization\PlaneHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\PlaneSerializer.cs" />
+    <Compile Include="Engine.Serialization\Point2HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Point2Serializer.cs" />
+    <Compile Include="Engine.Serialization\Point3HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Point3Serializer.cs" />
+    <Compile Include="Engine.Serialization\QuaternionHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\QuaternionSerializer.cs" />
+    <Compile Include="Engine.Serialization\RectangleHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\RectangleSerializer.cs" />
+    <Compile Include="Engine.Serialization\SByteSerializer.cs" />
+    <Compile Include="Engine.Serialization\SingleHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\SingleSerializer.cs" />
+    <Compile Include="Engine.Serialization\SortedDictionarySerializer.cs" />
+    <Compile Include="Engine.Serialization\SortedListSerializer.cs" />
+    <Compile Include="Engine.Serialization\StringHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\StringSerializer.cs" />
+    <Compile Include="Engine.Serialization\TypeCache.cs" />
+    <Compile Include="Engine.Serialization\UInt16HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\UInt16Serializer.cs" />
+    <Compile Include="Engine.Serialization\UInt32HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\UInt32Serializer.cs" />
+    <Compile Include="Engine.Serialization\UInt64HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\UInt64Serializer.cs" />
+    <Compile Include="Engine.Serialization\Vector2HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Vector2Serializer.cs" />
+    <Compile Include="Engine.Serialization\Vector3HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Vector3Serializer.cs" />
+    <Compile Include="Engine.Serialization\Vector4HumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\Vector4Serializer.cs" />
+    <Compile Include="Engine.Serialization\VersionHumanReadableConverter.cs" />
+    <Compile Include="Engine.Serialization\XElementSerializer.cs" />
+    <Compile Include="Engine.Serialization\XmlInputArchive.cs" />
+    <Compile Include="Engine.Serialization\XmlOutputArchive.cs" />
+    <Compile Include="Engine\BoundingBox.cs" />
+    <Compile Include="Engine\BoundingCircle.cs" />
+    <Compile Include="Engine\BoundingFrustum.cs" />
+    <Compile Include="Engine\BoundingRectangle.cs" />
+    <Compile Include="Engine\BoundingSphere.cs" />
+    <Compile Include="Engine\Box.cs" />
+    <Compile Include="Engine\Color.cs" />
+    <Compile Include="Engine\ConsoleLogSink.cs" />
+    <Compile Include="Engine\DebugLogSink.cs" />
+    <Compile Include="Engine\Dispatcher.cs" />
+    <Compile Include="Engine\DynamicArray.cs" />
+    <Compile Include="Engine\DynamicArrayExtensions.cs" />
+    <Compile Include="Engine\EngineActivity.cs" />
+    <Compile Include="Engine\EngineView.cs" />
+    <Compile Include="Engine\ILogSink.cs" />
+    <Compile Include="Engine\Log.cs" />
+    <Compile Include="Engine\LogType.cs" />
+    <Compile Include="Engine\MathUtils.cs" />
+    <Compile Include="Engine\Matrix.cs" />
+    <Compile Include="Engine\OpenFileMode.cs" />
+    <Compile Include="Engine\Plane.cs" />
+    <Compile Include="Engine\Point2.cs" />
+    <Compile Include="Engine\Point3.cs" />
+    <Compile Include="Engine\Quaternion.cs" />
+    <Compile Include="Engine\Random.cs" />
+    <Compile Include="Engine\Ray2.cs" />
+    <Compile Include="Engine\Ray3.cs" />
+    <Compile Include="Engine\ReadOnlyList.cs" />
+    <Compile Include="Engine\Rectangle.cs" />
+    <Compile Include="Engine\Storage.cs" />
+    <Compile Include="Engine\StreamLogSink.cs" />
+    <Compile Include="Engine\Time.cs" />
+    <Compile Include="Engine\UnhandledExceptionInfo.cs" />
+    <Compile Include="Engine\Utilities.cs" />
+    <Compile Include="Engine\Vector2.cs" />
+    <Compile Include="Engine\Vector3.cs" />
+    <Compile Include="Engine\Vector4.cs" />
+    <Compile Include="Engine\Window.cs" />
+    <Compile Include="Engine\WindowMode.cs" />
+    <Compile Include="FluxJpeg.Core.Decoder\BlockUpsamplingMode.cs" />
+    <Compile Include="FluxJpeg.Core.Decoder\JpegComponent.cs" />
+    <Compile Include="FluxJpeg.Core.Decoder\JpegDecodeProgressChangedArgs.cs" />
+    <Compile Include="FluxJpeg.Core.Decoder\JpegDecoder.cs" />
+    <Compile Include="FluxJpeg.Core.Decoder\JPEGFrame.cs" />
+    <Compile Include="FluxJpeg.Core.Decoder\JpegScan.cs" />
+    <Compile Include="FluxJpeg.Core.Encoder\JpegEncodeProgressChangedArgs.cs" />
+    <Compile Include="FluxJpeg.Core.Encoder\JpegEncoder.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\Convolution.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\Filter.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\FilterProgressEventArgs.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\GrayImage.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\LowpassResize.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\NNResize.cs" />
+    <Compile Include="FluxJpeg.Core.Filtering\ResamplingFilters.cs" />
+    <Compile Include="FluxJpeg.Core.IO\BinaryReader.cs" />
+    <Compile Include="FluxJpeg.Core.IO\BinaryWriter.cs" />
+    <Compile Include="FluxJpeg.Core.IO\JPEGBinaryReader.cs" />
+    <Compile Include="FluxJpeg.Core.IO\JPEGMarkerFoundException.cs" />
+    <Compile Include="FluxJpeg.Core\ColorModel.cs" />
+    <Compile Include="FluxJpeg.Core\ColorSpace.cs" />
+    <Compile Include="FluxJpeg.Core\DCT.cs" />
+    <Compile Include="FluxJpeg.Core\DecodedJpeg.cs" />
+    <Compile Include="FluxJpeg.Core\HuffmanTable.cs" />
+    <Compile Include="FluxJpeg.Core\Image.cs" />
+    <Compile Include="FluxJpeg.Core\ImageResizer.cs" />
+    <Compile Include="FluxJpeg.Core\JpegHeader.cs" />
+    <Compile Include="FluxJpeg.Core\JpegHuffmanTable.cs" />
+    <Compile Include="FluxJpeg.Core\JPEGMarker.cs" />
+    <Compile Include="FluxJpeg.Core\JpegQuantizationTable.cs" />
+    <Compile Include="FluxJpeg.Core\ResizeNotNeededException.cs" />
+    <Compile Include="FluxJpeg.Core\ResizeProgressChangedEventArgs.cs" />
+    <Compile Include="FluxJpeg.Core\YCbCr.cs" />
+    <Compile Include="FluxJpeg.Core\ZigZag.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkCopyBehaviour.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkHelper.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkLoadBehaviour.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkPredicate.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkPredicateEquiv.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkPredicateId.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkPredicateId2.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunkRaw.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunksList.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\ChunksListForWrite.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunk.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkBKGD.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkCHRM.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkGAMA.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkHIST.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkICCP.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkIDAT.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkIEND.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkIHDR.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkITXT.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkMultiple.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkOFFS.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkPHYS.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkPLTE.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkSBIT.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkSingle.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkSkipped.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkSPLT.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkSRGB.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkSTER.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkTEXT.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkTextVar.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkTIME.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkTRNS.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkUNKNOWN.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngChunkZTXT.cs" />
+    <Compile Include="Hjg.Pngcs.Chunks\PngMetadata.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\Adler32.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\AZlibInputStream.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\AZlibOutputStream.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\CRC32.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\DeflateCompressLevel.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\EDeflateCompressStrategy.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\ZlibInputStreamMs.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\ZlibOutputStreamMs.cs" />
+    <Compile Include="Hjg.Pngcs.Zlib\ZlibStreamFactory.cs" />
+    <Compile Include="Hjg.Pngcs\CustomMemoryStream.cs" />
+    <Compile Include="Hjg.Pngcs\FilterType.cs" />
+    <Compile Include="Hjg.Pngcs\FilterWriteStrategy.cs" />
+    <Compile Include="Hjg.Pngcs\ImageInfo.cs" />
+    <Compile Include="Hjg.Pngcs\ImageLine.cs" />
+    <Compile Include="Hjg.Pngcs\ImageLineHelper.cs" />
+    <Compile Include="Hjg.Pngcs\ImageLines.cs" />
+    <Compile Include="Hjg.Pngcs\PngCsUtils.cs" />
+    <Compile Include="Hjg.Pngcs\PngDeinterlacer.cs" />
+    <Compile Include="Hjg.Pngcs\PngHelperInternal.cs" />
+    <Compile Include="Hjg.Pngcs\PngIDatChunkInputStream.cs" />
+    <Compile Include="Hjg.Pngcs\PngIDatChunkOutputStream.cs" />
+    <Compile Include="Hjg.Pngcs\PngjBadCrcException.cs" />
+    <Compile Include="Hjg.Pngcs\PngjException.cs" />
+    <Compile Include="Hjg.Pngcs\PngjExceptionInternal.cs" />
+    <Compile Include="Hjg.Pngcs\PngjInputException.cs" />
+    <Compile Include="Hjg.Pngcs\PngjOutputException.cs" />
+    <Compile Include="Hjg.Pngcs\PngjUnsupportedException.cs" />
+    <Compile Include="Hjg.Pngcs\PngReader.cs" />
+    <Compile Include="Hjg.Pngcs\PngWriter.cs" />
+    <Compile Include="Hjg.Pngcs\ProgressiveOutputStream.cs" />
+    <Compile Include="NVorbis.Ogg\ContainerReader.cs" />
+    <Compile Include="NVorbis.Ogg\Crc.cs" />
+    <Compile Include="NVorbis.Ogg\Packet.cs" />
+    <Compile Include="NVorbis.Ogg\PacketReader.cs" />
+    <Compile Include="NVorbis.Ogg\PageFlags.cs" />
+    <Compile Include="NVorbis\BufferedReadStream.cs" />
+    <Compile Include="NVorbis\DataPacket.cs" />
+    <Compile Include="NVorbis\Huffman.cs" />
+    <Compile Include="NVorbis\HuffmanListNode.cs" />
+    <Compile Include="NVorbis\IContainerReader.cs" />
+    <Compile Include="NVorbis\IPacketProvider.cs" />
+    <Compile Include="NVorbis\IVorbisStreamStatus.cs" />
+    <Compile Include="NVorbis\Mdct.cs" />
+    <Compile Include="NVorbis\NewStreamEventArgs.cs" />
+    <Compile Include="NVorbis\ParameterChangeEventArgs.cs" />
+    <Compile Include="NVorbis\RingBuffer.cs" />
+    <Compile Include="NVorbis\StreamReadBuffer.cs" />
+    <Compile Include="NVorbis\Utils.cs" />
+    <Compile Include="NVorbis\VorbisCodebook.cs" />
+    <Compile Include="NVorbis\VorbisFloor.cs" />
+    <Compile Include="NVorbis\VorbisMapping.cs" />
+    <Compile Include="NVorbis\VorbisMode.cs" />
+    <Compile Include="NVorbis\VorbisReader.cs" />
+    <Compile Include="NVorbis\VorbisResidue.cs" />
+    <Compile Include="NVorbis\VorbisStreamDecoder.cs" />
+    <Compile Include="NVorbis\VorbisTime.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

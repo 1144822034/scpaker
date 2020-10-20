@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCPAK2", "SCPAK2\SCPAK2.csproj", "{A678ECF2-2889-46B6-AF48-712CA5CA936D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pakdll", "pakdll\pakdll.csproj", "{40CDA977-CDB2-4AC6-8858-08EBEEDD6AC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A678ECF2-2889-46B6-AF48-712CA5CA936D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A678ECF2-2889-46B6-AF48-712CA5CA936D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A678ECF2-2889-46B6-AF48-712CA5CA936D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A678ECF2-2889-46B6-AF48-712CA5CA936D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A678ECF2-2889-46B6-AF48-712CA5CA936D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A678ECF2-2889-46B6-AF48-712CA5CA936D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{40CDA977-CDB2-4AC6-8858-08EBEEDD6AC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CDA977-CDB2-4AC6-8858-08EBEEDD6AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CDA977-CDB2-4AC6-8858-08EBEEDD6AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CDA977-CDB2-4AC6-8858-08EBEEDD6AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E8EB705-0A08-4E6A-B24C-63DAE3040F43}
+	EndGlobalSection
+EndGlobal

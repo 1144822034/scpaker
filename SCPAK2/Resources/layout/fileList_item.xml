@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/filelist_main">
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#faaa"
+        >
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/file_delete"            
+        android:id="@+id/fileIcon"
+            />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/itemName"
+        android:text="15415351312"
+        android:background="#a3aaaa"/>
+        </LinearLayout>
+</LinearLayout>
