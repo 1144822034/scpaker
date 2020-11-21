@@ -4,11 +4,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using SCPAK2;
 
 public class Pak21
 {
-	public Pak21(string PakDirectory)
+	public MainActivity activity1;
+	public Pak21(string PakDirectory,MainActivity activity)
 	{
+		this.activity1 = activity;
 		if (!Directory.Exists(PakDirectory))
 		{
 			throw new DirectoryNotFoundException("将要封包的文件夹不存在");
@@ -39,6 +42,7 @@ public class Pak21
 		binaryWriter.Write(list.Count);
 		foreach (ContentFileInfo item in list)
 		{
+			activity1.sendDialog("[2.1]打包中...",item.fileName);
 			if (item.typeName == "Engine.Graphics.Texture2D")
 			{
 				string[] array = item.fileName.Substring(PakDirectory.Length + 1, item.fileName.Length - PakDirectory.Length - 1).Split('/');
@@ -73,6 +77,7 @@ public class Pak21
 		int num2 = 0;
 		foreach (ContentFileInfo item2 in list)
 		{
+			activity1.sendDialog("[2.1]打包中...", item2.fileName);
 			binaryWriter.BaseStream.Position = (int)num;
 			binaryWriter.Write((byte)222);
 			binaryWriter.Write((byte)173);

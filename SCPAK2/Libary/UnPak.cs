@@ -2,15 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-
+using SCPAK2;
 namespace SCPAK
 {
 	public class UnPak
 	{
 		private byte[] keys = Encoding.UTF8.GetBytes("tiTrKAXRpwuRhNI3gTkxIun6AyLxSZaIgEjVkyFWhD6w0QgwmN5YwykY2I79OHIolI1r4ewZ2uEfStqC7GRDM8CRTNQTdg91pkOkbnIPAiEp2EqkZWYPgPv6CNZpB3E1OuuBmR3ZzYEv8UMjQxjyXZy1CEOD8guk3uiiPvyFaf5pSznSNWXbnhmAzTbi1TEGCyhxejMTB23KUgqNiskGlrHaIVNz83DXVGkvm");
-
-		public UnPak(string pakFile)
+		private MainActivity activity1;
+		public UnPak(string pakFile,MainActivity activity)
 		{
+			this.activity1 = activity;
 			if (!File.Exists(pakFile))
 			{
 				throw new FileNotFoundException("文件不存在！");
@@ -74,6 +75,7 @@ namespace SCPAK
 			}
 			foreach (PakInfo item in listFileStream)
 			{
+				activity1.sendDialog("[2.2]解包中...","解包文件"+ item.fileName);
 				Stream stream;
 				switch (item.typeName)
 				{

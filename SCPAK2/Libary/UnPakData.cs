@@ -1,17 +1,17 @@
 ﻿// SCPAK.UnPakData
-using Engine;
 using Engine.Serialization;
-using Hjg.Pngcs;
-using SCPAK;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-
+using Hjg.Pngcs;
+using SCPAK2;
 internal class UnPakData
 {
-	public static void _UnPakData(List<PAKInfo> listFileStream, string pakDirectory)
+	private static MainActivity activity1;
+	public static void _UnPakData(List<PAKInfo> listFileStream, string pakDirectory,MainActivity activity)
 	{
+		activity1 = activity;
 		if (!Directory.Exists(pakDirectory))
 		{
 			Directory.CreateDirectory(pakDirectory);
@@ -19,6 +19,7 @@ internal class UnPakData
 		foreach (PAKInfo item in listFileStream)
 		{
 			FileStream fileStream;
+			if(activity1!=null) activity1.sendDialog("[2.1]解包中...","解包文件"+ item.fileName);
 			switch (item.typeName)
 			{
 				case "System.String":

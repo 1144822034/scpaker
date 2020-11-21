@@ -24,10 +24,9 @@ namespace SCPAK2
             listView.ItemClick += new EventHandler<AdapterView.ItemClickEventArgs>(click);
         }
         public void click(object obj,AdapterView.ItemClickEventArgs args) {
-            actions[args.Position].Start();
-        }
-        public void setClick(System.Threading.Thread thread) {
-            thread.Start();
+            if (args.Position < actions.Count)
+                actions[args.Position].Start();
+            else Hide();
         }
         public void setText(string t)
         {

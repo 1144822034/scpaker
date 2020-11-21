@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-
+using SCPAK2;
 
 public class UnPak21
 {
@@ -15,7 +15,7 @@ public class UnPak21
 		}
 	}
 
-	public UnPak21(string PakFile)
+	public UnPak21(string PakFile,MainActivity activity)
 	{
 		if (!File.Exists(PakFile))
 		{
@@ -43,7 +43,7 @@ public class UnPak21
 			});
 			binaryReader.BaseStream.Position = position2;
 		}
-		UnPakData._UnPakData(list, pakDirectory);
+		UnPakData._UnPakData(list, pakDirectory,activity);
 		binaryReader.Dispose();
 		fileStream.Dispose();
 	}

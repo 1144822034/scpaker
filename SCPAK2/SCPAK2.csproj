@@ -63,12 +63,19 @@
     <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Engine">
+      <HintPath>..\..\[2020092602]SC2.2mobile\assimbles\Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="PngCs">
+      <HintPath>Pngcs\PngCs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity\BlockEditActivity.cs" />
@@ -79,6 +86,44 @@
     <Compile Include="Activity\MainActivity.cs" />
     <Compile Include="Dialog\MyDialog.cs" />
     <Compile Include="Dialog\SelectOptionDialog.cs" />
+    <Compile Include="Libary\Bmp.cs" />
+    <Compile Include="Libary\BoundingBox.cs" />
+    <Compile Include="Libary\Collada.cs" />
+    <Compile Include="Libary\ColladaExporter.cs" />
+    <Compile Include="Libary\ContentFileInfo.cs" />
+    <Compile Include="Libary\ExtensionMethods.cs" />
+    <Compile Include="Libary\FontHandler.cs" />
+    <Compile Include="Libary\Matrix.cs" />
+    <Compile Include="Libary\ModelBoneData.cs" />
+    <Compile Include="Libary\ModelBuffersData.cs" />
+    <Compile Include="Libary\ModelContentReader.cs" />
+    <Compile Include="Libary\ModelContentWriter21.cs" />
+    <Compile Include="Libary\ModelData.cs" />
+    <Compile Include="Libary\ModelDataContentWriter21.cs" />
+    <Compile Include="Libary\ModelExporter.cs" />
+    <Compile Include="Libary\ModelHandler.cs" />
+    <Compile Include="Libary\ModelMeshData.cs" />
+    <Compile Include="Libary\ModelMeshPartData.cs" />
+    <Compile Include="Libary\PadStream.cs" />
+    <Compile Include="Libary\Pak.cs" />
+    <Compile Include="Libary\Pak21.cs" />
+    <Compile Include="Libary\PakData21.cs" />
+    <Compile Include="Libary\PakInfo.cs" />
+    <Compile Include="Libary\PakInfo21.cs" />
+    <Compile Include="Libary\ShaderHandler.cs" />
+    <Compile Include="Libary\SoundHandler.cs" />
+    <Compile Include="Libary\TextHandler.cs" />
+    <Compile Include="Libary\Texture2DHandler.cs" />
+    <Compile Include="Libary\UnPak.cs" />
+    <Compile Include="Libary\UnPak21.cs" />
+    <Compile Include="Libary\UnPakData.cs" />
+    <Compile Include="Libary\Vector3.cs" />
+    <Compile Include="Libary\VertexDeclaration.cs" />
+    <Compile Include="Libary\VertexElement.cs" />
+    <Compile Include="Libary\VertexElementFormat.cs" />
+    <Compile Include="Libary\ZipArchive.cs" />
+    <Compile Include="Libary\ZipArchiveEntry.cs" />
+    <Compile Include="OnDialogCancelListener.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Adaper\spinnerClickListener.cs" />
@@ -115,12 +160,6 @@
   <ItemGroup>
     <Folder Include="Assets\" />
     <Folder Include="CustomView\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\pakdll\pakdll.csproj">
-      <Project>{40cda977-cdb2-4ac6-8858-08ebeedd6ac5}</Project>
-      <Name>pakdll</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Compat">
@@ -176,6 +215,9 @@
     <AndroidResource Include="Resources\layout\optionslist.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Pngcs\PngCs.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -2,15 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-
+using SCPAK2;
 namespace SCPAK
 {
 	public class Pak
 	{
 		private readonly byte[] keys = Encoding.UTF8.GetBytes("tiTrKAXRpwuRhNI3gTkxIun6AyLxSZaIgEjVkyFWhD6w0QgwmN5YwykY2I79OHIolI1r4ewZ2uEfStqC7GRDM8CRTNQTdg91pkOkbnIPAiEp2EqkZWYPgPv6CNZpB3E1OuuBmR3ZzYEv8UMjQxjyXZy1CEOD8guk3uiiPvyFaf5pSznSNWXbnhmAzTbi1TEGCyhxejMTB23KUgqNiskGlrHaIVNz83DXVGkvm");
-
-		public Pak(string PakDirectory)
+		private MainActivity activity1;
+		public Pak(string PakDirectory,MainActivity activity)
 		{
+			this.activity1 = activity;
 			if (!Directory.Exists(PakDirectory))
 			{
 				throw new DirectoryNotFoundException("将要封包的文件夹不存在");
@@ -41,6 +42,7 @@ namespace SCPAK
 			binaryWriter.Write(list.Count);
 			foreach (ContentFileInfo item in list)
 			{
+				activity1.sendDialog("[2.2]打包中...", "写入目录"+item.fileName);
 				binaryWriter.Write(item.fileName.Substring(PakDirectory.Length + 1, item.fileName.Length - PakDirectory.Length - 1));
 				binaryWriter.Write(item.typeName);
 				list2.Add(binaryWriter.BaseStream.Position);
@@ -54,6 +56,7 @@ namespace SCPAK
 			int num = 0;
 			foreach (ContentFileInfo item2 in list)
 			{
+				activity1.sendDialog("[2.2]打包中...","写入文件"+ item2.fileName);
 				binaryWriter.BaseStream.Position = position2;
 				binaryWriter.Write((byte)222);
 				binaryWriter.Write((byte)173);

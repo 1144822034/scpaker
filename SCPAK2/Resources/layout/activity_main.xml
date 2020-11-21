@@ -14,13 +14,20 @@
         android:text="上一级"
         android:id="@+id/lastbtn"
         />
-            <Button
+		<Button
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="刷新"
+	android:id="@+id/refreshbtn"
+        />
+		<Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="帮助"
         android:id="@+id/infobtn"
         />
         </LinearLayout>
+	
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
